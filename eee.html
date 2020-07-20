@@ -1,83 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="https://Trex-Group.GitHub.io/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://Trex-Group.GitHub.io/theme/css/custom.css" media="screen">
+<head>
 
-        <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-
-        <meta name="author" content="Shubin Sun" />
-
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary">
-
-<meta name="keywords" content="招聘, 求职, EEE, " />
-
-<meta property="og:title" content="EEE "/>
-<meta property="og:url" content="https://Trex-Group.GitHub.io/eee.html" />
-<meta property="og:description" content="模拟物理碰撞要解决的几个问题： 怎样模拟速度的变化？ 设置一个摩擦系数 friction(0&lt;friction&lt;1.0) 和响应用户按键之后的一个 X 坐标单时间片增量 dx，一个 Y 坐标单时间片增量 dy，每隔一个时间片 dx = friction; dy = friction; 只要参数设置得当，看起来就会觉得速度自然地减慢。因为我们所用的浮点数的数据类型的精度限制，物体在经过一定数量时间片后就会停下来。 怎样模拟碰撞？ 每个时间片处理过程中，判断物体的边缘坐标加上 dx 与 dy 后有没有超过屏幕边缘，如果超过，则采取一定的策略重新设置物体坐标让其在正常范围内，如 X 轴超过，则对 dx 取反；如 Y 轴超过，则对 dy 取反。计算好坐标之后再进行绘图。 碰撞过程中的声音处理 这里涉及到音量，左右声道 …" />
-<meta property="og:site_name" content="Pelican 测试环境" />
-<meta property="og:article:author" content="Shubin Sun" />
-<meta property="og:article:published_time" content="2020-08-08T10:20:00+09:00" />
-<meta name="twitter:title" content="EEE ">
-<meta name="twitter:description" content="模拟物理碰撞要解决的几个问题： 怎样模拟速度的变化？ 设置一个摩擦系数 friction(0&lt;friction&lt;1.0) 和响应用户按键之后的一个 X 坐标单时间片增量 dx，一个 Y 坐标单时间片增量 dy，每隔一个时间片 dx = friction; dy = friction; 只要参数设置得当，看起来就会觉得速度自然地减慢。因为我们所用的浮点数的数据类型的精度限制，物体在经过一定数量时间片后就会停下来。 怎样模拟碰撞？ 每个时间片处理过程中，判断物体的边缘坐标加上 dx 与 dy 后有没有超过屏幕边缘，如果超过，则采取一定的策略重新设置物体坐标让其在正常范围内，如 X 轴超过，则对 dx 取反；如 Y 轴超过，则对 dy 取反。计算好坐标之后再进行绘图。 碰撞过程中的声音处理 这里涉及到音量，左右声道 …">
-
-        <title>EEE  · Pelican 测试环境
-</title>
+        <title>EEE</title>
+        <meta charset="utf-8" />
 
 
-    </head>
-    <body>
-        <div id="content">
-            <div class="navbar navbar-static-top">
-                <div class="navbar-inner">
-                    <div class="container-fluid">
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="https://Trex-Group.GitHub.io/"><span class=site-name>Pelican 测试环境</span></a>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav pull-right top-menu">
-                                <li >
-                                    <a href=
-                                       https://Trex-Group.GitHub.io
-                                    >Home</a>
-                                </li>
-                                <li ><a href="https://Trex-Group.GitHub.io/pages/page1.html">page1</a></li>
-                                <li ><a href="https://Trex-Group.GitHub.io/categories.html">Categories</a></li>
-                                <li ><a href="https://Trex-Group.GitHub.io/tags.html">Tags</a></li>
-                                <li ><a href="https://Trex-Group.GitHub.io/archives.html">Archives</a></li>
-                                <li><form class="navbar-search" action="https://Trex-Group.GitHub.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="https://Trex-Group.GitHub.io/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="https://Trex-Group.GitHub.io/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="https://Trex-Group.GitHub.io/theme/pygment.css" />
+
+        <script src="https://Trex-Group.GitHub.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
+</head>
+
+<body id="index" class="home">
+
+
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href="https://Trex-Group.GitHub.io/">Pelican 测试环境 <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href="https://Trex-Group.GitHub.io/">Home</a></li>
+
+                <li><a href="https://Trex-Group.GitHub.io/pages/page1.html">page1</a></li>
+
+              </ul>
             </div>
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="span1"></div>
-                    <div class="span10">
-<article itemscope>
-<div class="row-fluid">
-    <header class="page-header span10 offset2">
-        <h1>
-            <a href="https://Trex-Group.GitHub.io/eee.html">
-                EEE
-            </a>
-        </h1>
-    </header>
-</div>
 
-<div class="row-fluid">
-        <div class="span8 offset2 article-content">
-            
-            <p>模拟物理碰撞要解决的几个问题：</p>
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h2 class="entry-title">
+                <a href="https://Trex-Group.GitHub.io/eee.html" rel="bookmark"
+                   title="Permalink to EEE">EEE</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2020-08-08T10:20:00+09:00">
+                周六 08 八月 2020
+              </abbr>
+              <address class="vcard author">By 
+                <a class="url fn" href="https://Trex-Group.GitHub.io/author/shubin-sun.html"> Shubin Sun</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <p>模拟物理碰撞要解决的几个问题：</p>
 <ol>
 <li>怎样模拟速度的变化？</li>
 </ol>
@@ -220,168 +206,85 @@
 
 
 <p>HGE 示例源码及 Win32 SDK 源码及可运行程序下载地址：http://download.csdn.net/detail/mzlogin/4059869</p>
+            </div><!-- /.entry-content -->
 
 
-             
- 
-            
-            
-            
+        </div><!-- /.eleven.columns -->
+
+<div class="three columns">
+
+  <h4>Pages</h4>
+
+  <ul>
+
+    <li ><a href="https://Trex-Group.GitHub.io/pages/page1.html">page1</a></li>
+  
+  <h4>Categories</h4>
+  <ul class="blank">
+    <li><a href="https://Trex-Group.GitHub.io/category/aaa.html">AAA</a></li>
+    <li><a href="https://Trex-Group.GitHub.io/category/bbb.html">BBB</a></li>
+    <li><a href="https://Trex-Group.GitHub.io/category/ccc.html">CCC</a></li>
+    <li><a href="https://Trex-Group.GitHub.io/category/eee.html">EEE</a></li>
+  </ul>
+
+
+<h4>Tags</h4>
+	<ul class="blank">
+	    <li class="tag-4"><a href="https://Trex-Group.GitHub.io/tag/qiu-zhi.html">求职</a></li>
+	    <li class="tag-4"><a href="https://Trex-Group.GitHub.io/tag/zhao-pin.html">招聘</a></li>
+</ul>
+
+
+<nav class="widget">
+  <h4>Social</h4>
+  <ul class="blank">
+    <li><a href="#">You can add links in your config file</a></li>
+    <li><a href="#">Another social link</a></li>
+  </ul>
+</nav>
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
 
 
 
 
 
-
-
-            <hr/>
-        </div>
-        <section id="article-sidebar" class="span2">
-            <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2020-08-08T10:20:00+09:00">周六 08 八月 2020</time>
-            <h4>Category</h4>
-            <a class="category-link" href="https://Trex-Group.GitHub.io/categories.html#eee-ref">EEE</a>
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article">
-                <li><a href="https://Trex-Group.GitHub.io/tags.html#qiu-zhi-ref">求职
-                    <span class="superscript">1</span>
-</a></li>
-                <li><a href="https://Trex-Group.GitHub.io/tags.html#zhao-pin-ref">招聘
-                    <span class="superscript">1</span>
-</a></li>
-            </ul>
-<h4>Contact</h4>
-<div id="sidebar-social-link">
-</div>
-            
-
-
-
-
-
-            
-
-
-
-
-
-        </section>
-</div>
-</article>
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides.
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
+              </ul>
             </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
+          </div>
+        </footer>
 
     </div>
 
-</div>                    </div>
-                    <div class="span1"></div>
-                </div>
-            </div>
-        </div>
-<footer>
 
-
-
-
-    <div id="fpowered">
-        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
-        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
-    </div>
-</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script src="https://Trex-Group.GitHub.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
-
-    <script>
-    (function () {
-        if (window.location.hash.match(/^#comment-\d+$/)) {
-            $('#comment_thread').collapse('show');
-        }
-    })();
-    window.onhashchange=function(){
-        if (window.location.hash.match(/^#comment-\d+$/))
-            window.location.reload(true);
-    }
-    $('#comment_thread').on('shown', function () {
-        var link = document.getElementById('comment-accordion-toggle');
-        var old_innerHTML = link.innerHTML;
-        $(link).fadeOut(200, function() {
-            $(this).text('Click here to hide comments').fadeIn(200);
-        });
-        $('#comment_thread').on('hidden', function () {
-            $(link).fadeOut(200, function() {
-                $(this).text(old_innerHTML).fadeIn(200);
-            });
-        })
-    })
-</script>
-
-    </body>
-    <!-- Theme: Elegant built for Pelican
-        License : MIT -->
+  <script src="https://Trex-Group.GitHub.io/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="https://Trex-Group.GitHub.io/theme/js/libs/gumby.min.js"></script>
+  <script src="https://Trex-Group.GitHub.io/theme/js/plugins.js"></script>
+</body>
 </html>
